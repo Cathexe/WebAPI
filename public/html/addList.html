@@ -11,12 +11,18 @@
         Add To List
     </h1>
 
-    <form style="font-family:courier; text-align:center;">
-        <label style="color: white;" for="sName">Song Name:</label><br>
-        <input type="text" id="sName" name="sName"><br>
-        <label style="color: white;" for="artist">Artist:</label><br>
-        <input type="text" id="artist" name="artist"><br><br>
-        <input type="submit" value="Submit">
+    <form action="/addtolist" method="POST" style="font-family:courier; text-align:center;">
+        <label style="color: white;" for="songName">Song Name:</label>
+        <br>
+        <input type="text" id="songName" name="songName">
+        <br>
+        <label style="color: white;" for="artist">Artist:</label>
+        <br>
+        <input type="text" id="artist" name="artist">
+        <br><br>
+        <button type="submit">Add Song</button>
+        <br>
+        <a href="/">Go Back</a>
     </form> 
 </body>
 </html>
