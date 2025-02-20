@@ -30,7 +30,7 @@ function isAuthenticated(req,res, next){
     return res.redirect("/login");
 }
 
-const mongoURI = process.env.MONGODB_URI;
+const mongoURI = process.env.MONGO_URI;
 mongoose.connect(mongoURI);
 
 const db = mongoose.connection;
