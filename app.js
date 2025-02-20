@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "public")))
 
 app.use(session({
-    secret:"12345",
+    secret:process.env.SESSION_SECRET,
     resave:false,
     saveUninitialized:false,
     cookie:{secure:false}
@@ -30,7 +30,7 @@ function isAuthenticated(req,res, next){
     return res.redirect("/login");
 }
 
-const mongoURI = "mongodb://localhost:27017/webAPI";
+const mongoURI = process.env.MONGODB_URI;
 mongoose.connect(mongoURI);
 
 const db = mongoose.connection;
