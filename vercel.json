@@ -1,7 +1,7 @@
 {
     "version":2,
     "builds":[{
-        "src":"WEBAPI/app.js",
+        "src":"app.js",
         "use":"@vercel/node"
     }
     ],
