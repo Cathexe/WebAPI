@@ -8,7 +8,7 @@
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"WEBAPI/app.js"
+            "dest":"app.js"
 
         }
     ]
