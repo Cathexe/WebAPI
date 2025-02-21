@@ -100,7 +100,7 @@ app.post("/addtolist", async (req,res)=>{
     try{
         const newSong = new Songs(req.body)
         const saveSong = await newSong.save()
-        res.redirect("/")
+        res.redirect("/songList")
         console.log(saveSong)
     }catch(err){
         res.status(501).json({error:"Failed to add new Song."});
